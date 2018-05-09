@@ -1,9 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(cors());
+
+require('./routes/movies')(app);
 
 app.use((req, res, next) => {
   const error = new Error('Not found');

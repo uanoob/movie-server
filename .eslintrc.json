@@ -6,6 +6,8 @@
         "jest": true
       },
       "rules": {
-        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+        "no-return-assign": 0,
+        "prefer-destructuring": 0
       }
 }
